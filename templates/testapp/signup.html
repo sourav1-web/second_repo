@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+  <style>
+     body{
+      background-color: rgba(52, 48, 48, 0.964);}
+      button{
+  border: none;
+  background: #ea1538;
+  padding: 12px 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  transition: .4s;
+  border-radius: 25px;
+
+}
+button:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+
+}
+  </style>
+</head>
+<center>
+  <div class="jumbtron">
+    <div class="container" >
+    <h1>Signup form</h1>
+    <form method="post">
+      {{form.as_p}}
+      {% csrf_token %}
+      <button class="btn btn-primary">Signup</button>
+    </form>
+    </div>
+    </div>
+    </center>
+  </div>
+  

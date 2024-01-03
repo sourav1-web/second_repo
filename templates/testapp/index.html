@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+{% extends "testapp/base.html" %}
+{% block navblock %}
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <style>
+    .all {
+      text-align: center;
+      padding: 50px;
+      color: #0d3f74;
+      background-color: #33525aab;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+    }
+
+    .text {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    h2 {
+      color: #007BFF;
+    }
+
+    h3 {
+      color: #28A745;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: #DC3545;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .image {
+      margin-left: 20px;
+      margin-right: 20px;
+      width: 600px;
+    }
+
+    #about {
+      text-align: center;
+      padding: 30px;
+      background-color: #6b8298;
+      color: #343a40;
+      font-family: 'Arial', sans-serif;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #007BFF;
+    }
+
+    span {
+      color: #28A745;
+    }
+
+    #contact {
+      text-align: center;
+      padding: 30px;
+      background-color: #6b8298;
+      color: #343a40;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .contactt {
+      height: 30vh;
+      width: 100%;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
+      background-size: cover;
+      background-position: center;
+    }
+
+    .contactt p {
+      padding-top: 10px;
+    }
+
+    .contact-container {
+      text-align: center;
+      padding: 50px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 50px auto;
+    }
+
+    h1 {
+      color: #007BFF;
+    }
+
+    p {
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    .form-submit {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .form-submit:hover {
+      background-color: #0056b3;
+    }
+
+    /* Resetting some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling for the footer */
+footer {
+  background-color: #333; /* Set the background color for the footer */
+  color: #fff; /* Set the text color */
+  padding: 40px 0; /* Add padding for spacing */
+}
+
+.container {
+  width: 80%; /* Set the width of the container */
+  margin: 0 auto; /* Center the container */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Space out the columns evenly */
+}
+
+/* Styling for each column */
+.col-lg-2,
+.col-md-4,
+.col-sm-6 {
+  margin-bottom: 20px; /* Add spacing between columns */
+}
+
+/* Styling for headings in columns */
+h4 {
+  color: #28A745; /* Set a different color for headings */
+}
+
+/* Styling for the links in the columns */
+ul a {
+  color: #fff; /* Set the link color */
+  text-decoration: none; /* Remove underlines from links */
+}
+
+/* Styling for the social icons */
+.fab {
+  margin-right: 8px; /* Add spacing between icons */
+}
+
+/* Styling for the Newsletter section */
+form {
+  display: flex;
+  margin-top: 15px; /* Add spacing between text and form */
+}
+
+input[type="email"] {
+  width: 70%; /* Set the width of the email input */
+  padding: 8px; /* Add padding for input field */
+}
+
+button {
+  background-color: #28A745; /* Set the background color for the button */
+  color: #fff; /* Set the text color for the button */
+  padding: 8px 15px; /* Add padding for the button */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+/* Styling for the copyright text */
+.text-center {
+  text-align: center; /* Center the copyright text */
+  margin-top: 20px; /* Add spacing above the text */
+}
+footer p{
+  color: #2ba452;
+}
+  </style>
+</head>
+<body>
+  <div class="all">
+    <div id="about">
+      <h1 align="center">About <span>Us</span></h1>
+    </div>
+    <div class="container">
+      <div class="text">
+        <h2>About Our Jobs Platform</h2>
+        <p>Welcome to Sourav Jobs, your premier destination for finding the perfect job opportunities. We are dedicated to connecting talented individuals with exciting career prospects, helping companies find the right talent, and fostering a thriving community in the job market.</p>
+        <h3>Our Mission</h3>
+        <p>At Sourav Jobs, our mission is to simplify the job search process for both employers and job seekers. We strive to provide a user-friendly platform that facilitates seamless connections, promotes diversity and inclusion, and contributes to the overall growth of individuals and businesses.</p>
+        <h3>What Sets Us Apart</h3>
+        <p>1. Comprehensive Job Listings: We offer an extensive database of job opportunities across various industries and locations.</p>
+        <p>2. User-Friendly Interface: Our platform is designed to be intuitive and easy to navigate, ensuring a smooth experience for all users.</p>
+        <p>3. Personalized Services: We understand that every job seeker and employer is unique. That's why we provide personalized services to meet individual needs.</p>
+        <h3>Get in Touch</h3>
+        <p>We value your feedback and inquiries. If you have any questions, suggestions, or if you are a company looking to partner with us, please feel free to reach out to our team. We are here to assist you!</p>
+        <p>Contact us at: <a href="mailto:info@souravjobs.com">info@souravjobs.com</a></p>
+      </div>
+      <img src="{% static 'images/about.avif'%}" alt="Your Image" class="image">
+    </div>
+  </div>
+  
+  <div class="all">
+    <div id="contact">
+      <h1 align="center">Contact <span>Us</span></h1>
+    </div>
+    <div class="contactt">
+      <p>We provide the best quality job based on your experience.</p>
+      <p>Thank you for visiting our website. If you have any questions, suggestions, or if you are a company looking to partner with us, please feel free to reach out to our team. We are here to assist you!</p>
+      <p>Contact us at: <a href="mailto:info@example.com">info@example.com</a></p>
+    </div>
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <p style="color: #28A745;">
+        Thank you for reaching out to us. Please use the form below to send us a message, and we'll get back to you as soon as possible.
+      </p>
+      <button ><a href="/contact">click here</a></button>
+    </div>
+  </div>
+  
+ <!-- Start of footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <!-- About column -->
+      <div class="col-lg-2 col-md-4 col-sm-6">
+        <h4>About</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem eu nisi consequat ultrices. Morbi vitae leo quis magna fringilla sagittis.</p>
+      </div>
+      <!-- Jobs column -->
+      <div class="col-lg-2 col-md-4 col-sm-6">
+        <h4>Jobs</h4>
+        <ul>
+          <li><a href="#">Browse Jobs</a></li>
+          <li><a href="#">Post a Job</a></li>
+          <li><a href="#">Employers</a></li>
+          <li><a href="#">Career Advice</a></li>
+        </ul>
+      </div>
+      <!-- Contact column -->
+      <div class="col-lg-2 col-md-4 col-sm-6">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">Email Us</a></li>
+          <li><a href="#">Call Us</a></li>
+          <li><a href="#">Visit Us</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <!-- Social column -->
+      <div class="col-lg-2 col-md-4 col-sm-6">
+        <h4>Social</h4>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+      <!-- Newsletter column -->
+      <div class="col-lg-4 col-md-8 col-sm-12">
+        <h4>Newsletter</h4>
+        <p>Subscribe to our newsletter and get the latest updates on jobs, tips, and opportunities.</p>
+        <form>
+          <input type="email" name="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <!-- End of row -->
+    <div class="row">
+      <div class="col-12">
+        <p class="text-center">© 2024 Your Job Site. All rights reserved.</p>
+      </div>
+    </div>
+    <!-- End of row -->
+  </div>
+  <!-- End of container -->
+</footer>
+<!-- End of footer -->
+
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+  
+          const targetElement = document.querySelector(this.getAttribute('href'));
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start', // or 'end'
+              inline: 'nearest', // or 'center'
+            });
+          }
+        });
+      });
+    });
+  </script>
+  
+  {% endblock navblock %}
+</body>
+</html>

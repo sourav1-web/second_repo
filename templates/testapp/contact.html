@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful Form</title>
+  <style>
+    body {
+      background-color: #433939;
+      color: #e48a8a;
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #333;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 5px;
+      box-sizing: border-box;
+      background-color: #555;
+      color: #fff;
+      border: 1px solid #777;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #8f4646;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #a42f3b;
+    }
+    h1{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1 >CONTACT US </h1>
+  <form method="post">
+    {{ cform.as_p }}
+    {% csrf_token %}
+    <button class="btn btn-primary">Submit</button>
+  </form>
+</body>
+</html>
