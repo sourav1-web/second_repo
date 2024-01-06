@@ -1,5 +1,89 @@
+/* General Styles */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://www.jobs.ie/recruiters/recruitment-news/wp-content/uploads/2020/03/How-to-tell-someone-they-didnt-get-the-job.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px; /* Adjust spacing for smaller screens */
+  padding-left: 5%;
+  padding-right: 5%; /* Adjust spacing for smaller screens */
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 15px; /* Adjust padding for smaller screens */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+button {
+  border: none;
+  background: #ea1538;
+  padding: 12px 20px; /* Adjust padding for smaller screens */
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  transition: .4s;
+  border-radius: 25px;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 10px; /* Adjust spacing for smaller screens */
+    padding-left: 5%;
+    padding-right: 5%; /* Adjust spacing for smaller screens */
+  }
+
+  nav ul li {
+    display: block;
+    padding: 10px 0; /* Adjust padding for smaller screens */
+  }
+
+  button {
+    padding: 12px 15px; /* Adjust padding for smaller screens */
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .content-container {
+    flex-direction: column;
+  }
+
+  .content {
+    height: auto;
+  }
+}
 
   
+
+
+
+
+
   .btn {
     margin-right: 10px;
     border: 1px solid #00d5ff;
